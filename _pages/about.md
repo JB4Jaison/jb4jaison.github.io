@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle:  Computer Vision Scientist | St. Jude Children's Research Hospital
 
@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Memphis, TN 38119</p>
+    <p>St Jude Children's Research Hospital</p>
     <p>john.jaison6299@gmail.com</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
