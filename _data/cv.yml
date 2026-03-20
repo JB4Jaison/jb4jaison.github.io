@@ -1,159 +1,186 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Jaison John
+  label: Image Data Scientist & AI/ML Engineer
+  email: john.jaison6299@gmail.com
+  phone: 617-334-5204
+  location: Memphis, TN 38119
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: Image Data Scientist and AI/ML Engineer with expertise in computer vision, deep learning, and biomedical imaging. Experienced in building scalable pipelines, self-supervised learning, and deploying models in research and industry settings.
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
-    - network: GitHub
-      username: example
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: jaijohn
 
   sections:
-    Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
-        highlights:
-          - Description 1.
-          - Description 2.
-
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
-
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: St. Jude Children's Research Hospital
+        position: Image Data Scientist (Computer Vision Scientist)
+        location: Memphis, TN
+        start_date: 2023-03
+        end_date: Present
         highlights:
-          - Relativity
-          - Description 2.
+          - Led advanced analysis of medical images across EM, Fluorescence, and Lightsheet microscopy modalities, resulting in authorship across three peer-reviewed publications.
+          - Co-instructed bi-annual Bio Image Analysis courses for 40+ students per cohort at the institution.
+          - Deployed Singularity-based multi-CPU/multi-GPU image processing pipelines on HPC for reproducible, scalable execution.
+          - Architected a self-supervised clustering algorithm for cellular phenotype classification without labeled datasets using embeddings from models such as DINO.
+          - Developed a deep learning super-resolution pipeline for microscopy achieving superior Z-axis reconstruction over bicubic interpolation across MSE, PSNR, and SSIM metrics.
+          - Unified a multi-step linear radial intensity analysis workflow into a scalable, modular Snakemake pipeline with parallel execution, halving previous runtime.
+          - Designed high-throughput annotation strategies combining expert review with AI-assisted labeling, accelerating annotation creation by up to 10×.
+          - Established a fluorescent mouse retinal vasculature analysis workflow—covering pre-processing, segmentation, and feature extraction—across 1000+ 3D volumes with 92% accuracy.
+          - Developed custom Napari Qt plugins to streamline scientist workflows and improve usability of internal image-processing tools.
+          - Trained a UNet model for automated removal of drosophila embryo yolk from 3D volumes.
+          - Built a PDF parser using multimodal LLMs (GPT-4o) and an LMM RAG database for biomedical imaging question answering.
+          - Constructed a pipeline for enhancing large (300GB+) lightsheet microscopy images for visualization and improved segmentation.
+          - Developed a hollow vasculature detection pipeline using Circle Hough Transform, reducing vessel quantification error rates by 50%.
+        technologies: Python, Napari, Snakemake, ImageJ, Singularity, Ilastik, Cellpose, Imaris, QuPath
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: Cambridge Mobile Telematics
+        position: Data Science (Deep Learning) Intern
+        location: Remote
+        start_date: 2022-06
+        end_date: 2022-09
         highlights:
-          - Description 1.
-          - Description 2.
+          - Conceptualized and implemented an ML pipeline to automate crash labeling, reducing label turnover time by 80%.
+          - Conducted literature surveys on weakly-supervised learning and developed a Vision Transformer architecture for the labeling process.
+          - Explained model results using explainable AI techniques.
+        technologies: Python, Databricks, Docker, PyTorch, PySpark
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+      - company: Fulcrum Therapeutics
+        position: Machine Learning and Computational Biology Co-op
+        location: Remote
+        start_date: 2021-07
+        end_date: 2021-12
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+          - Created a DNA splicing analysis workflow using Python-based splicing toolkits, speeding up the existing pipeline by at least 50%.
+          - Worked with AWS cloud services for storing, retrieving, and analyzing large datasets.
+        technologies: Python, EC2, S3, rMATS
 
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+    Education:
+      - institution: Northeastern University, Khoury College of Computer Sciences
+        location: Boston, MA
+        area: Artificial Intelligence
+        studyType: MS
+        start_date: 2020
+        end_date: 2022
+        score: "4.0/4.0"
+        highlights:
+          - "Specialization: Machine Learning"
+          - "Relevant Courses: Programming Design Paradigms, Deep Learning, Machine Learning, HCI for AI"
 
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+      - institution: MAHE, Manipal Institute of Technology
+        location: India
+        area: Information Technology
+        studyType: B.Tech
+        start_date: 2016
+        end_date: 2020
+        score: "9.34/10.0"
+        highlights:
+          - "Specialization: Data Analytics"
+          - "Relevant Courses: Data Structures, Object Oriented Programming, Software Engineering"
 
     Publications:
-      - title: Zur Elektrodynamik bewegter Körper
+      - title: "Z-upscaling: Optical Flow Guided Frame Interpolation for Isotropic Reconstruction of 3D EM Volumes"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+          - F. A. Ferede
+          - A. Khalighifar
+          - Jaison John
+          - K. Venkataraman
+          - K. Khairy
+        publisher: "IEEE 22nd International Symposium on Biomedical Imaging (ISBI)"
+        releaseDate: 2025-04
+        summary: Presents a frame interpolation approach for isotropic 3D EM volume reconstruction using optical flow.
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
+      - title: "Mitochondrial proteostasis regulated by CRL5Ozz and Alix modulates skeletal muscle metabolism and fiber type"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+          - Y. Campos
+          - G. Palacios
+          - E. Gomero
+          - Jaison John
+          - et al.
+        publisher: Communications Biology
+        releaseDate: 2025
 
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
+      - title: "A mouse model for hemoglobin SC disease recapitulates characteristic human pathologies"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+          - J. Zhai
+          - J. B. Papizan
+          - Y. Yao
+          - Jaison John
+          - et al.
+        publisher: Blood Advances
+        releaseDate: 2025
+
+      - title: "A classification model for prediction of clinical severity level using qSOFA medical score"
+        authors:
+          - D. Olivia
+          - A. Nayak
+          - M. Balachandra
+          - Jaison John
+        publisher: Information Discovery and Delivery
+        releaseDate: 2020
 
     Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: Programming Languages
+        keywords: "Python, MATLAB, C++, Java, JavaScript, HTML/CSS, R"
 
-    Languages:
-      - name: German
-        summary: "Native speaker"
+      - name: Frameworks & Libraries
+        keywords: "PyTorch, TensorFlow, OpenCV, React, Snakemake, rMATS, SparkML, DASH"
 
-      - name: English
-        summary: "Fluent"
+      - name: Developer Tools
+        keywords: "VSCode, AWS, Singularity, EC2, S3, Git, Databricks, Docker, Android Studio, Tableau"
 
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: Databases
+        keywords: "Microsoft SQL Server, MongoDB, MySQL, React AsyncStorage"
 
+    Projects:
+      - name: Napari Macro (NaPaM)
+        summary: Open-source plugin for the Napari visualization platform enabling instant processing and visualization of multidimensional images and ROIs. Available via pip and the Napari Hub.
+        highlights:
+          - Single-owner maintained open source project
+          - Installable via pip and listed on Napari Hub
+        technologies: PyQT, Python
+
+      - name: Mechanism of Action Prediction
+        summary: Complete machine learning pipeline to classify drugs based on biological activity using multi-label classification.
+        highlights:
+          - Applied supervised classification models for multi-label classification
+        technologies: SVM, Neural Networks, ResNets, XGBoost, Python, TensorFlow
+
+      - name: Crowd Source based Query Verifier
+        summary: Human-in-the-loop system to verify voice commands given to smart assistants via crowdsourcing for accurate transcription of noisy or ambiguous commands.
+        highlights:
+          - Designed interface conforming to HCI guidelines for optimal UX
+        technologies: Android, Toloka
+
+    Volunteer:
+      - company: St. Jude BioImage Analysis Course
+        position: Instructor
+        location: Memphis, TN
+        highlights:
+          - Taught scientists the basics of bio-image analysis in a bi-annual institutional course.
+          - Authored exercise notebooks and instruction sheets to enhance student engagement and theoretical comprehension.
+
+      - company: High School Research Immersion Program
+        position: Mentor
+        location: Memphis, TN
+        highlights:
+          - Introduced research skills to local high school students in Memphis.
+          - Designed a structured curriculum covering Python, image processing, and computer vision.
+          - Guided students through literature reviews and implementation, culminating in a scientific poster.
+
+      - company: Northeastern University — CS4100 Foundations of Artificial Intelligence
+        position: Lead Teaching Assistant
+        highlights:
+          - Coordinated a team of 4 TAs for a course of 80+ students under Professor Holtzen.
+          - Managed grading delegation, rubric creation, and deadline management.
+          - Previously assisted Professor Gold and Professor Holtzen during Summer 2021 and Spring 2022.
+
+      - company: National Science Competition
+        position: Mentor
+        highlights:
+          - Mentored students building a Computer Vision model to detect Walk/Stop signals from a live camera feed.
+          - Guided dataset procurement, annotation, and transfer learning on an object detection model.
+          - Students were finalists in the Army Educational Outreach Program (AEOP) and received the STEM-In-Action grant for 2020–2021.
     Certificates:
       - name: Machine Learning
         date: 2018-01-01
@@ -169,21 +196,3 @@ cv:
         date: 2018-01-01
         issuer: Stanford University
         icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
