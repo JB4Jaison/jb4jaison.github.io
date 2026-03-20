@@ -5,6 +5,13 @@
 email: john.jaison6299@gmail.com # your email address
 # inspirehep_id: 1010907 # Inspire HEP author ID
 # rss_icon: False # comment this line to hide the RSS icon
+
 scholar_userid: zL5FtXEAAAAJ # your Google Scholar ID
-linkedin_username: jaijohn # your LinkedIn username
-github_username: JB4Jaison # your GitHub username
+
+linkedin_username: 
+  value: jaijohn # your LinkedIn username
+  title: LinkedIn Profile
+
+github_username:
+  value: JB4Jaison # your GitHub username
+  title: GitHub Profile
