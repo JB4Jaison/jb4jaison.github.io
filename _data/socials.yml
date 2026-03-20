@@ -4,9 +4,7 @@
 # cv_pdf: /assets/pdf/example_pdf.pdf # path to your CV PDF file
 email: john.jaison6299@gmail.com # your email address
 # inspirehep_id: 1010907 # Inspire HEP author ID
-rss_icon: False # comment this line to hide the RSS icon
+# rss_icon: False # comment this line to hide the RSS icon
 scholar_userid: zL5FtXEAAAAJ # your Google Scholar ID
-LinkedIn: # example of a custom social media platform
-  logo: https://fontawesome.com/icons/square-linkedin?f=brands&s=solid
-  title: LinkedIn
-  url: https://www.linkedin.com/in/jaijohn/
+linkedin_username: jaijohn # your LinkedIn username
+github_username: JB4Jaison # your GitHub username
