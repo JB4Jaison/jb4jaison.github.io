@@ -1,81 +1,79 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: NaPaM
+description: A napari plugin to run macros (Python scripts) on images for any kind of image processing
+img: https://raw.githubusercontent.com/JB4Jaison/napam/main/assets/napam_execution_demo.gif
 importance: 1
 category: work
-related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**NaPaM** (Napari Macro Tool) is a [napari](https://napari.org/) plugin that allows you to run macros — i.e. Python scripts — on images for any kind of image processing. It provides a flexible widget-based interface within napari to write and execute custom processing scripts directly on your loaded images.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+<a href="https://github.com/JB4Jaison/napam">GitHub</a> | <a href="https://napari-hub.org/plugins/napam">napari hub</a> | <a href="https://pypi.org/project/napam/">PyPI</a>
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+---
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+## Features
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+- Execute custom Python scripts directly on images within napari
+- Widget-based interface for writing and running macros
+- Supports any kind of image processing workflow
+- Built on top of numpy, matplotlib, magicgui, qtpy, and QScintilla
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+---
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## Installation
 
-{% raw %}
+You can install NaPaM via pip:
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
+```bash
+pip install napam
 ```
 
-{% endraw %}
+---
+
+## Demo
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="https://raw.githubusercontent.com/JB4Jaison/napam/main/assets/napam_execution_demo.gif" title="NaPaM execution demo" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    NaPaM plugin in action — running a macro on an image within napari.
+</div>
+
+---
+
+## Technical Details
+
+| Detail          | Value                          |
+| --------------- | ------------------------------ |
+| **Version**     | 0.1.4                          |
+| **Plugin Type** | Widget                         |
+| **Python**      | 3.8, 3.9, 3.10, 3.11          |
+| **License**     | BSD-3-Clause                   |
+| **Language**    | 100% Python                    |
+
+## Dependencies
+
+Core dependencies include:
+
+```
+numpy
+magicgui
+qtpy
+matplotlib
+QScintilla
+```
+
+## Contributing
+
+Contributions are welcome! Before submitting a pull request, please run tests using tox and ensure code coverage is maintained:
+
+```bash
+pip install tox
+tox
+```
+
+If you encounter any issues, please [file a GitHub issue](https://github.com/JB4Jaison/napam/issues) with a detailed description.
