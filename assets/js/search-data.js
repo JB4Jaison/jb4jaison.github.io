@@ -421,9 +421,9 @@ ninja.data = [{
           description: "A napari plugin to run macros (Python scripts) on images for any kind of image processing",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-keystroke-dynamics",
+          title: 'Keystroke Dynamics',
+          description: "User authentication via typing behavior using a Keras neural network",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-project-3-with-very-long-name",
