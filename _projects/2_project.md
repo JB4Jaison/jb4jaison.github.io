@@ -1,81 +1,183 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: Keystroke Dynamics
+description: User authentication via typing behavior using a Keras neural network
+img: https://fortml346612610.wordpress.com/wp-content/uploads/2019/05/keyboard-1s32u4e-1170x550.jpg?w=1000
 importance: 2
 category: work
-giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**Keystroke Dynamics** is a behavioral biometric approach for user authentication based on typing patterns. Unlike static biometrics (fingerprints, iris scans), behavioral biometrics capture patterns over time — making it possible to continuously authenticate users without interrupting normal system usage.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+<a href="https://fortml346612610.wordpress.com/2019/06/06/keystroke-dynamics-using-keras/">Blog Post</a>
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+---
+
+## How It Works
+
+Keystroke dynamics measures two primary metrics from a user's typing behavior:
+
+- **Dwell Time** — how long a key remains pressed
+- **Flight Time** — duration between releasing one key and pressing the next
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="https://fortml346612610.wordpress.com/wp-content/uploads/2019/05/keyboard-1s32u4e-1170x550.jpg?w=1000" title="Keystroke dynamics concept" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Keystroke dynamics captures unique typing patterns for biometric authentication.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+---
+
+## Dataset
+
+The implementation uses the [CMU Keystroke Dataset](http://www.cs.cmu.edu/~keystroke/) containing **51 users** each typing the phrase `.tie5Roanl` **400 times** (50 times across 8 sessions). The dataset records hold time, keydown-keydown intervals, and keyup-keydown measurements — totaling 31 features per sample.
+
+The data is split 80/20 for training and testing: **320 samples per user** for training (16,320 total) and **80 samples per user** for testing (4,080 total).
+
+---
+
+## Neural Network Architecture
+
+A 3-layer Sequential model built with Keras:
+
+| Layer                      | Nodes | Activation |
+| -------------------------- | ----- | ---------- |
+| Input + Hidden Layer 1     | 16    | ReLU       |
+| Hidden Layer 2             | 16    | ReLU       |
+| Output Layer (per subject) | 51    | Softmax    |
+
+User labels are converted to categorical vectors using one-hot encoding:
 
 <div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="https://fortml346612610.wordpress.com/wp-content/uploads/2019/05/one-hot-encoding-300x129.png?w=300" title="One-hot encoding of subject labels" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    One-hot encoding converts subject identifiers into categorical vectors for the neural network.
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+---
 
-{% raw %}
+## Implementation
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
+```python
+import numpy as np
+import pandas as pd
+import keras
+from keras.models import Sequential
+from keras.layers import Dense
+from sklearn.metrics import accuracy_score
+from keras.utils import np_utils
+from sklearn.preprocessing import LabelEncoder
+from keras.utils.np_utils import to_categorical
+import pandas
+import pickle
+np.set_printoptions(suppress=True)
+
+class NeuralNet:
+
+    def __init__(self, subjects):
+        self.subjects = subjects
+
+    def training(self):
+        self.classifier = Sequential()
+
+        # Input layer + first hidden layer (31 features -> 16 nodes)
+        self.classifier.add(Dense(output_dim=16, init='uniform',
+                                  activation='relu', input_dim=31))
+
+        # Second hidden layer
+        self.classifier.add(Dense(output_dim=16, init='uniform',
+                                  activation='relu'))
+
+        # Output layer (one node per subject)
+        self.classifier.add(Dense(output_dim=51, init='uniform',
+                                  activation='softmax'))
+
+        self.classifier.compile(optimizer='adam',
+                                loss='binary_crossentropy',
+                                metrics=['accuracy'])
+
+        self.classifier.fit(self.train_X, self.train_Y,
+                            batch_size=10, nb_epoch=150)
+
+    def testing(self):
+        scores = self.classifier.evaluate(self.test_X, self.test_Y)
+        print("\n%s: %.2f%%" % (self.classifier.metrics_names[1],
+                                scores[1] * 100))
+
+    def save_model(self):
+        pkl_filename = "key_dynamics_live.pkl"
+        with open(pkl_filename, 'wb') as file:
+            pickle.dump(self.classifier, file)
+
+    def evaluate(self):
+        global encoder
+        self.train_X = data.groupby("subject").head(320) \
+                           .loc[:, "H.period":"H.Return"]
+        self.train_Y = pd.DataFrame(
+            data.groupby("subject").head(320).loc[:, "subject"])
+
+        self.test_X = data.groupby("subject").tail(80) \
+                          .loc[:, "H.period":"H.Return"]
+        self.test_Y = pd.DataFrame(
+            data.groupby("subject").tail(80).loc[:, "subject"])
+
+        self.train_Y.columns = ['subject']
+        self.df_train = pd.concat([self.train_X, self.train_Y], axis=1)
+        self.df_train = self.df_train.sample(frac=1)
+        self.df_test = pd.concat([self.test_X, self.test_Y], axis=1)
+        self.df_test = self.df_test.sample(frac=1)
+
+        self.train_X = self.df_train.loc[:, "H.period":"H.Return"]
+        self.train_Y = self.df_train.loc[:, "subject"]
+        self.test_X = self.df_test.loc[:, "H.period":"H.Return"]
+        self.test_Y = self.df_test.loc[:, "subject"]
+
+        self.test_Y = encoder.transform(self.test_Y)
+        self.train_Y = encoder.transform(self.train_Y)
+        self.test_Y = np_utils.to_categorical(self.test_Y)
+        self.train_Y = np_utils.to_categorical(self.train_Y)
+
+        self.training()
+        self.testing()
+        self.save_model()
+
+path = "keystroke_live.csv"
+data = pandas.read_csv(path)
+subjects = data["subject"].unique()
+encoder = LabelEncoder()
+encoder.fit(subjects)
+
+# Save encoder for deployment
+with open("encoded_live.pkl", 'wb') as file:
+    pickle.dump(encoder, file)
+
+print("Average Accuracy for Neural Network:")
+NeuralNet(subjects).evaluate()
 ```
 
-{% endraw %}
+---
+
+## Training Parameters
+
+| Parameter  | Value              |
+| ---------- | ------------------ |
+| Optimizer  | Adam               |
+| Loss       | Binary Crossentropy|
+| Batch Size | 10                 |
+| Epochs     | 150                |
+
+The trained model and label encoder are serialized as `.pkl` files using pickle for later deployment.
+
+---
+
+## References
+
+- [CMU Keystroke Dataset](http://www.cs.cmu.edu/~keystroke/)
+- [Keystroke100 Dataset](http://personal.ie.cuhk.edu.hk/~ccloy/downloads_keystroke100.html)
+- [Typing Behavior Dataset](http://cvlab.cse.msu.edu/typing-behavior-dataset.html)

@@ -45,35 +45,4 @@ pip install napam
 
 ---
 
-## Technical Details
-
-| Detail          | Value                          |
-| --------------- | ------------------------------ |
-| **Version**     | 0.1.4                          |
-| **Plugin Type** | Widget                         |
-| **Python**      | 3.8, 3.9, 3.10, 3.11          |
-| **License**     | BSD-3-Clause                   |
-| **Language**    | 100% Python                    |
-
-## Dependencies
-
-Core dependencies include:
-
-```
-numpy
-magicgui
-qtpy
-matplotlib
-QScintilla
-```
-
-## Contributing
-
-Contributions are welcome! Before submitting a pull request, please run tests using tox and ensure code coverage is maintained:
-
-```bash
-pip install tox
-tox
-```
-
 If you encounter any issues, please [file a GitHub issue](https://github.com/JB4Jaison/napam/issues) with a detailed description.
