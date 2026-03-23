@@ -17,8 +17,8 @@ ninja.data = [{
             window.location.href = "/publications/";
           },
         },{id: "nav-projects",
-          title: "projects",
-          description: "A growing collection of your cool projects.",
+          title: "Projects",
+          description: "Prjects done outside of current work. Check out my CV for the list of projects I am working in office.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -416,9 +416,9 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-napam",
+          title: 'NaPaM',
+          description: "A napari plugin to run macros (Python scripts) on images for any kind of image processing",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-project-2",
@@ -490,14 +490,14 @@ ninja.data = [{
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.linkedin.com/in/{"value"=>"jaijohn", "title"=>"LinkedIn Profile"}", "_blank");
+          window.open("https://www.linkedin.com/in/jaijohn", "_blank");
         },
       },{
         id: 'social-github',
         title: 'GitHub',
         section: 'Socials',
         handler: () => {
-          window.open("https://github.com/{"value"=>"JB4Jaison", "title"=>"GitHub Profile"}", "_blank");
+          window.open("https://github.com/JB4Jaison", "_blank");
         },
       },{
       id: 'light-theme',
