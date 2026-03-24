@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "Projects",
-          description: "Prjects done outside of current work. Check out my CV for the list of projects I am working in office.",
+          description: "List of projects done outside of current work. Check out my CV for the list of projects I am working in office.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -418,7 +418,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-napam",
           title: 'NaPaM',
-          description: "A Napari plugin to run macros (Python scripts) on images within Napari",
+          description: "A plugin to run macros on images within Napari",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-keystroke-dynamics",
