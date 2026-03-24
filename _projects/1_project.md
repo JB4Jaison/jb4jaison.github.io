@@ -1,7 +1,7 @@
 ---
 layout: page
 title: NaPaM
-description: A Napari plugin to run macros (Python scripts) on images within Napari
+description: A plugin to run macros on images within Napari
 img: https://raw.githubusercontent.com/JB4Jaison/napam/main/assets/napam_execution_demo.gif
 importance: 1
 category: work

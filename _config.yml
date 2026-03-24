@@ -7,11 +7,11 @@ first_name: Jaison
 middle_name: 
 last_name: John
 contact_note: >
-  Best ways to reach out to me is via email or LinkedIn
+  Best way to reach out to me is via email or LinkedIn
 description: >
 footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: Cmputer Vision, Bioimage Analysis, Artificial Intellgence # add your own keywords or leave empty
+keywords: Computer Vision, Bioimage Analysis, Artificial Intellgence # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: website-icon.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -67,7 +67,8 @@ max_width: 930px
 # see https://schema.org/docs/faq.html for more information
 serve_og_meta: false # Include Open Graph meta tags in the HTML head
 serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+og_image: true
+og_image: /assets/img/prof_pic-og.jpeg # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
