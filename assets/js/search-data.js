@@ -418,7 +418,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-napam",
           title: 'NaPaM',
-          description: "A napari plugin to run macros (Python scripts) on images for any kind of image processing",
+          description: "A Napari plugin to run macros (Python scripts) on images within Napari",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-keystroke-dynamics",
