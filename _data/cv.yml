@@ -180,18 +180,19 @@ cv:
           - Mentored students building a Computer Vision model to detect Walk/Stop signals from a live camera feed.
           - Guided dataset procurement, annotation, and transfer learning on an object detection model.
           - Students were finalists in the Army Educational Outreach Program (AEOP) and received the STEM-In-Action grant for 2020–2021.
+          
     Certificates:
       - name: Deep Learning for Microscopy Image Analysis
         date: 2023-09-05
         issuer: UC Chicago - Marine Biological Laboratory
-        icon: fa-solid fa-award
+        icon: fa-solid fa-certificate
 
       - name: CS 101
         date: 2016-07-01
         issuer: Stanford University
-        icon: fa-solid fa-award
+        icon: fa-solid fa-certificate
 
       - name: Machine Learning
         date: 2018-02-01
         issuer: Coursera
-        icon: fa-solid fa-award 
+        icon: fa-solid fa-certificate 

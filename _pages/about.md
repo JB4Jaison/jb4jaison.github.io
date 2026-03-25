@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle:  Computer Vision Scientist | St. Jude Children's Research Hospital
+subtitle:  Computer Vision | Bioimage Analysis
 
 profile:
   align: left
