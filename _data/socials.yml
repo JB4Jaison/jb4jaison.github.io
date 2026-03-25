@@ -8,12 +8,6 @@ email: john.jaison6299@gmail.com # your email address
 
 scholar_userid: zL5FtXEAAAAJ # your Google Scholar ID
 
-name: GitHub
-  link: https://github.com/JB4Jaison
-  icon: fa-brands fa-github
-  enabled: true
+linkedin_username: jaijohn
 
-name: LinkedIn
-  link: https://linkedin.com/in/jaijohn
-  icon: fa-brands fa-linkedin
-  enabled: true
+github_username: JB4Jaison

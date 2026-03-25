@@ -181,17 +181,17 @@ cv:
           - Guided dataset procurement, annotation, and transfer learning on an object detection model.
           - Students were finalists in the Army Educational Outreach Program (AEOP) and received the STEM-In-Action grant for 2020–2021.
     Certificates:
+      - name: Deep Learning for Microscopy Image Analysis
+        date: 2023-09-05
+        issuer: UC Chicago - Marine Biological Laboratory
+        icon: fa-solid fa-award
+
+      - name: CS 101
+        date: 2016-07-01
+        issuer: Stanford University
+        icon: fa-solid fa-award
+
       - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
+        date: 2018-02-01
+        issuer: Coursera
+        icon: fa-solid fa-award 
