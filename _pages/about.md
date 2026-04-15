@@ -26,7 +26,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an Image Data Scientist at **St. Jude Children's Research Hospital**, where I use computer vision and deep learning to help researchers see what the microscope alone cannot. Whether it is reconstructing 3D volumes, classifying cellular phenotypes, or building tools that make image analysis more accessible, my work is driven by a simple goal: turning images into insights that advance our understanding of disease.
+I am an Image Data Scientist at **St. Jude Children's Research Hospital**, where I use computer vision and deep learning to help researchers see what the microscope alone cannot. Whether it is reconstructing 3D volumes, classifying cellular phenotypes, or building tools that make image analysis more accessible, my work is driven by a simple goal: turning images into insights that advance our understanding of biology and medicine.
 
 Beyond the lab, I am passionate about teaching and mentorship. I co-instruct bio-image analysis courses at St. Jude, mentor high school students in computer vision research, and contribute to the open-source community through tools like **Napari Macro (NaPaM)**.
 
