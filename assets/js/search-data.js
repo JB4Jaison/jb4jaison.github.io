@@ -419,9 +419,9 @@ ninja.data = [{
           description: "User authentication via typing behavior using a Keras neural network",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-",
-          title: '',
-          description: "",
+            },},{id: "projects-snakemake-connecting-cellprofiler-and-python",
+          title: 'Snakemake: Connecting Cellprofiler and Python',
+          description: "A Snakemake workflow that stitches CellProfiler pipelines and Python scripts into a scalable, HPC-friendly image-analysis pipeline",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "teachings-data-science-fundamentals",
