@@ -3,7 +3,7 @@ layout: page
 title: Keystroke Dynamics
 description: User authentication via typing behavior using a Keras neural network
 img: https://fortml346612610.wordpress.com/wp-content/uploads/2019/05/keyboard-1s32u4e-1170x550.jpg?w=1000
-importance: 2
+importance: 1
 category: work
 ---
 

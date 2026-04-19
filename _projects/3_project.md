@@ -2,8 +2,8 @@
 layout: page
 title: Snakemake: Connecting Cellprofiler and Python
 description: A Snakemake workflow that stitches CellProfiler pipelines and Python scripts into a scalable, HPC-friendly image-analysis pipeline
-img: Snakemake_logo.png
-importance: 3
+img: /assets/img/Snakemake_logo.png
+importance: 1
 category: work
 ---
 
