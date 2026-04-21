@@ -1,10 +1,10 @@
 cv:
   name: Jaison John
-  label: Image Data Scientist & AI/ML Engineer
+  label: Computer Vision Scientist
   email: john.jaison6299@gmail.com
   location: Memphis, TN
   image: ""
-  summary: Image Data Scientist and AI/ML Engineer with expertise in computer vision, deep learning, and biomedical image analysis. Experienced in building scalable pipelines, self-supervised learning, and deploying models.
+  summary: AI Researcher with expertise in vision models, deep learning, and biomedical image analysis. Experienced in building scalable pipelines, self-supervised learning, and deploying models.
 
   social_networks:
     - network: LinkedIn
@@ -123,13 +123,13 @@ cv:
         keywords: "Python, MATLAB, C++, Java, JavaScript, HTML/CSS, R"
 
       - name: Frameworks & Libraries
-        keywords: "PyTorch, TensorFlow, OpenCV, React, Snakemake, rMATS, SparkML, DASH"
+        keywords: "PyTorch, TensorFlow, OpenCV, Snakemake, DASH"
 
       - name: Developer Tools
-        keywords: "VSCode, AWS, Singularity, EC2, S3, Git, Databricks, Docker, Android Studio, Tableau"
+        keywords: "VSCode, Singularity, EC2, S3, Git, Docker, Android Studio"
 
       - name: Databases
-        keywords: "Microsoft SQL Server, MongoDB, MySQL, React AsyncStorage"
+        keywords: "Microsoft SQL Server, MySQL"
 
     Projects:
       - name: Napari Macro (NaPaM)
