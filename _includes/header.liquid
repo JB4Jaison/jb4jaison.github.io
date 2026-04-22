@@ -47,7 +47,7 @@
           {% endfor %}
 
           <!-- About -->
-          <li class="nav-item mx-2 {% if page.permalink == '/' %}active{% endif %}">
+          <li class="nav-item mx-4 {% if page.permalink == '/' %}active{% endif %}">
             <a class="nav-link" href="{{ '/' | relative_url }}">
               {{- about_title }}
               {% if page.permalink == '/' %}
@@ -67,7 +67,7 @@
                     {% assign has_active_child = true %}
                   {% endif %}
                 {% endfor %}
-                <li class="nav-item dropdown mx-2 {% if page.title == p.title or has_active_child %}active{% endif %}">
+                <li class="nav-item dropdown mx-4 {% if page.title == p.title or has_active_child %}active{% endif %}">
                   <a
                     class="nav-link dropdown-toggle"
                     href="#"
@@ -99,7 +99,7 @@
                 </li>
               {% else %}
                 {% assign parent_link = p.permalink | remove: 'index.html' %}
-                <li class="nav-item mx-2 {% if page.url contains parent_link %}active{% endif %}">
+                <li class="nav-item mx-4 {% if page.url contains parent_link %}active{% endif %}">
                   {%- if p.permalink contains '://' -%}
                     {%- assign url = p.permalink -%}
                   {%- elsif p.permalink contains '/blog/' -%}
