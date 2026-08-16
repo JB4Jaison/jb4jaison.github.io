@@ -398,16 +398,17 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-z-upscaling-optical-flow-guided-frame-interpolation-for-isotropic-reconstruction-of-3d-em-volumes-was-presented-at-ieee-isbi-2025-in-houston-tx",
+          title: 'Z-upscaling: Optical Flow Guided Frame Interpolation for Isotropic Reconstruction of 3D EM Volumes...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-a-mouse-model-for-hemoglobin-sc-disease-recapitulates-characteristic-human-pathologies-is-out-in-blood-advances",
+          title: 'A mouse model for hemoglobin SC disease recapitulates characteristic human pathologies is out...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-mitochondrial-proteostasis-regulated-by-crl5ozz-and-alix-modulates-skeletal-muscle-metabolism-and-fiber-type-published-in-communications-biology",
+          title: 'Mitochondrial proteostasis regulated by CRL5Ozz and Alix modulates skeletal muscle metabolism and fiber...',
+          description: "",
+          section: "News",},{id: "news-new-paper-out-granular-component-sub-phases-direct-ribosome-biogenesis-in-the-nucleolus-published-online-in-molecular-cell-and-featured-in-the-august-6-2026-issue",
+          title: 'New paper out: Granular component sub-phases direct ribosome biogenesis in the nucleolus, published...',
           description: "",
           section: "News",},{id: "projects-napam",
           title: 'NaPaM',
